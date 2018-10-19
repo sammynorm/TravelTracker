@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TravelTracker</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="permission_dialog">This app requires Location Permissions to function. Please try again.</string>
+    <string name="retry_permissions">Retry</string>
+    <string name="exit">Exit</string>
+</resources>
