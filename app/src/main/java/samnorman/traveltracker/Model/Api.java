@@ -13,7 +13,7 @@ public interface Api {
     @Headers({
             "Content-Type: application/json;charset=utf-8",
             "Accept: application/json;charset=utf-8",
-            "Cache-Control: max-age=640000"
-    })
+            "Cache-Control: max-age=640000"})
+
     Call<JSONPojo> sendcoordinates(@Body JSONPojo jsonpojo);
 }

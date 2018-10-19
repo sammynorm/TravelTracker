@@ -17,18 +17,7 @@ public class UtilSchedule {
 
             JobScheduler jobScheduler = context.getSystemService(JobScheduler.class);
             ComponentName name = new ComponentName(context, SpringPostRequest.class);
-            boolean hasBeenScheduled = false ;
 
-            //Checks if job has already been scheduled
-            for ( JobInfo jobInfo : jobScheduler.getAllPendingJobs() ) {
-                if ( jobInfo.getId() == 123 ) {
-                    hasBeenScheduled = true ;
-                    Log.d(TAG, "JOB ALREADY EXISTS");
-                    break;
-                }
-            }
-            //if it hasn't
-            if(!hasBeenScheduled){
                 //Hour and ID subject to change with UI implementation
                 final int result = jobScheduler.schedule(getJobInfo(123, 1, name));
 
@@ -37,8 +26,6 @@ public class UtilSchedule {
                     Log.d(TAG, "Scheduled job successfully from UtilSchedule");
                 }
             }
-        }
-
 
         //Use JobInfo conversion for API differences
         private JobInfo getJobInfo(final int id, final long hour, final ComponentName name) {
